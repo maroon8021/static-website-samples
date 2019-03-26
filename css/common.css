@@ -1,0 +1,8 @@
+.top-view.section {
+  padding: 0;
+}
+
+.top-view .container {
+  width: 100%;
+  max-width: 100%;
+}
