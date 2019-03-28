@@ -1,7 +1,6 @@
 .about-card{
   background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/top-view.jpg");
   background-blend-mode: multiply;
-  background-size: cover;
   margin: 1rem;
   height: 150px;
   padding: 3rem 0;
@@ -10,4 +9,9 @@
 
 .about-card .title{
   color: #ffffff;
+}
+
+.about-card.message{
+  background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/about/boss.jpg");
+  background-size: cover;
 }
