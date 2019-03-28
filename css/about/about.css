@@ -1,4 +1,7 @@
 .about-card{
+  width: 100%;
+}
+.about-card div{
   background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/top-view.jpg");
   background-blend-mode: multiply;
   margin: 1rem;
@@ -11,7 +14,17 @@
   color: #ffffff;
 }
 
-.about-card.message{
+.about-card .message{
   background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/about/boss.jpg");
+  background-size: cover;
+}
+
+.about-card .vision{
+  background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/about/vision.jpg");
+  background-size: cover;
+}
+
+.about-card .members{
+  background: radial-gradient(transparent, rgba(0,0,0,.9)) fixed, url("../../img/about/members.jpg");
   background-size: cover;
 }
