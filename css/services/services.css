@@ -1,0 +1,7 @@
+.services-columns{
+  flex-direction: column;
+}
+
+.services-column-reverse{
+  flex-direction: row-reverse;
+}
