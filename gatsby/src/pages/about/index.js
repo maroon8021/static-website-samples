@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import topView from "../images/top-view.jpg";
 
-import "../styles/index.scss";
+import "../styles/about.scss";
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
     <section className="section top-view">
       <div className="container">
@@ -15,7 +15,7 @@ const IndexPage = () => (
 
     <section className="section">
       <div className="container">
-        <h1 className="title">This Site is created by HTML , CSS & js</h1>
+        <h1 className="title">This is About Page</h1>
         <p className="subtitle is-6 is-spaced">
           Sample Text : As they rounded a bend in the path that ran beside the
           river, Lara recognized the silhouette of a fig tree atop a nearby
@@ -28,15 +28,32 @@ const IndexPage = () => (
           there was an island in the river. The island was a good spot to make
           camp. They would sleep on the island tonight.
         </p>
-        <h3 className="subtitle is-3">Library what I use on this site is</h3>
-        <p className="subtitle is-6">
-          <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">
-            bulma
-          </a>
-        </p>
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="container">
+        <h2 className="title">About Us</h2>
+        <div className="columns is-desktop is-vcentered">
+          <Link to="about/message" className="about-card">
+            <div className="column message">
+              <p className="title is-3">Message</p>
+            </div>
+          </Link>
+          <Link href="about/vision" className="about-card">
+            <div className="column vision">
+              <p className="title is-3">Vision</p>
+            </div>
+          </Link>
+          <Link href="about/members" className="about-card">
+            <div className="column members">
+              <p className="title is-3">Members</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </section>
   </Layout>
 );
 
-export default IndexPage;
+export default AboutPage;
