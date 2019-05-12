@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/layout";
-import topView from "../images/about/members.jpg";
+import topView from "../../../images/about/members.jpg";
 
-import "../styles/about.scss";
+import "../../../styles/about.scss";
 import membersData from "../../../data/members";
+import Layout from "../../../components/layout";
+import MemberCard from "../../../components/member-card";
 
 const AboutPage = () => (
   <Layout>
@@ -37,35 +37,7 @@ const AboutPage = () => (
         <h2 className="title">Members</h2>
         <div className="columns is-desktop is-vcentered">
           {membersData.map(data => (
-            <Link to="about/message">
-            <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src={data.image} alt="Placeholder image" class="member-orange">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                  </div>
-                </div>
-
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                  <a href="#">#css</a> <a href="#">#responsive</a>
-                  <br>
-                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </div>
-
-              </div>
-            </div>
-          </div>
-            </Link>
+            <MemberCard key={data.key} {...data} />
           ))}
         </div>
       </div>

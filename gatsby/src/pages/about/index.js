@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import Layout from "../components/layout";
-import topView from "../images/top-view.jpg";
+import Layout from "../../components/layout";
+import topView from "../../images/top-view.jpg";
 
-import "../styles/about.scss";
+import "../../styles/about.scss";
 
 const AboutPage = () => (
   <Layout>
@@ -40,12 +40,12 @@ const AboutPage = () => (
               <p className="title is-3">Message</p>
             </div>
           </Link>
-          <Link href="about/vision" className="about-card">
+          <Link to="about/vision" className="about-card">
             <div className="column vision">
               <p className="title is-3">Vision</p>
             </div>
           </Link>
-          <Link href="about/members" className="about-card">
+          <Link to="about/members" className="about-card">
             <div className="column members">
               <p className="title is-3">Members</p>
             </div>
