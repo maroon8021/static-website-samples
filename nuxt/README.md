@@ -1,22 +1,42 @@
-# nuxt
+# Created by Nuxt
 
-> My fine Nuxt.js project
+## Setup
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+```
+npm i
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+https://ja.nuxtjs.org/guide/installation/
+
+## Run server
+
+Run any command on this directly( `static-website-samples/nuxt` )
+
+## How to mix jQuery in nuxt
+
+See `pages/jquery-sample.vue`
+
+```javascript
+export default {
+  head() {
+    return {
+      script: [
+        {
+          src:
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+        }
+      ]
+    }
+  },
+  mounted: () => {
+    $('a[href^="#"]').click(function() {
+      const speed = 400
+      const href = $(this).attr('href')
+      const target = $(href === '#' || href === '' ? 'html' : href)
+      const position = target.offset().top
+      $('body,html').animate({ scrollTop: position }, speed, 'swing')
+      return false
+    })
+  }
+}
+```
